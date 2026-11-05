@@ -1,0 +1,22 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+.dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+}
+
+.connected { background: #22c55e; }
+.connecting { background: #f59e0b; animation: pulse 1s infinite; }
+.disconnected,
+.error { background: #ef4444; }
+
+@keyframes pulse {
+  50% { opacity: 0.3; }
+}

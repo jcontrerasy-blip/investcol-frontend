@@ -1,0 +1,136 @@
+.wrapper {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  display: flex;
+}
+
+.list {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--space-3);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-border) transparent;
+}
+
+.empty {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--color-text-muted);
+  text-align: center;
+}
+
+.emptyIcon {
+  opacity: 0.6;
+}
+
+.separator {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin: var(--space-2) 0;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  text-transform: capitalize;
+}
+
+.separator::before,
+.separator::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--color-border);
+}
+
+.system {
+  align-self: center;
+  max-width: 90%;
+  padding: 4px var(--space-3);
+  font-size: var(--font-size-sm);
+  font-style: italic;
+  color: var(--color-text-muted);
+  text-align: center;
+}
+
+.row {
+  display: flex;
+}
+
+.row.grouped {
+  margin-top: -4px;
+}
+
+.own {
+  justify-content: flex-end;
+}
+
+.other {
+  justify-content: flex-start;
+}
+
+.bubble {
+  max-width: 80%;
+  padding: 8px 12px;
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  overflow-wrap: anywhere;
+}
+
+.own .bubble {
+  background: linear-gradient(
+    135deg,
+    var(--color-primary),
+    color-mix(in srgb, var(--color-primary) 70%, #a855f7)
+  );
+  color: #fff;
+  border-bottom-right-radius: 4px;
+}
+
+.other .bubble {
+  background: var(--color-border);
+  border-bottom-left-radius: 4px;
+}
+
+.author {
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.text {
+  white-space: pre-wrap;
+}
+
+.time {
+  align-self: flex-end;
+  font-size: 11px;
+  opacity: 0.7;
+}
+
+.newMessages {
+  position: absolute;
+  bottom: var(--space-3);
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  width: fit-content;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  background: var(--color-primary);
+  border: none;
+  border-radius: 999px;
+  color: #fff;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgb(0 0 0 / 40%);
+  cursor: pointer;
+}
